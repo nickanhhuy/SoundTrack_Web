@@ -13,7 +13,7 @@ public class SongService {
     @Autowired
     private SongRepository songRepository;
 
-    public List<Song> getAllSongs() {
+    public List<Song> getSongs() {
         return songRepository.findAll();
     }
     public void addSongs(Song song){
