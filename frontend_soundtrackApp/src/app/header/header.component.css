@@ -34,25 +34,55 @@
   100% { background-image: url('../../images/musicappbg4.jpg'); }
 }
 
+.menu {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-section a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.login-button {
+  background-color: #1445a5;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 h1{
     font-size: 40px;
-    color: rgb(91, 227, 231);
+    color: rgb(58, 195, 230);
     text-align: center;
-    text-shadow: rgb(48, 85, 207) 0px 0px 10px, rgb(37, 92, 220) 0px 0px 20px, rgb(129, 9, 9) 0px 0px 30px;
+    text-shadow: rgb(26, 73, 165) 0px 0px 10px, rgb(40, 203, 206) 0px 0px 20px, rgb(10, 164, 110) 0px 0px 30px; /* I used the text-shadow to make the text more visible and attractive*/
 }
 
 p {
     font-size: 30px;
     font-style: italic;
+    font-weight: bold;
     text-align: center;
     color: white;
 }
 
 .searchbar {
-    width: 50%;
-    padding: 10px;
+    width: 80%;
+    padding: 15px;
+    font-weight: bold;
+    font-style: italic;
     margin: 20px auto;
     display: block;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 8px solid #22445d;
 }
