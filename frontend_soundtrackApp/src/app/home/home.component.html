@@ -1,1 +1,12 @@
-<p>This is some recommended playlist based on genres</p>
+<h2 class="section-title">Recommended Playlists by Genre</h2>
+
+<div *ngFor="let playlist of playlists" class="playlist-wrapper">
+  <h3>{{ playlist.title }}</h3>
+
+  <div class="songs-list">
+    <div class="song-card" *ngFor="let song of playlist.songs">
+      <p class="song-title">{{ song.title }}</p>
+      <p class="song-artist">{{ song.artist }}</p>
+    </div>
+  </div>
+</div>
