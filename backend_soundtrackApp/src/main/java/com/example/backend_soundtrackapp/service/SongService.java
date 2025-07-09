@@ -1,6 +1,7 @@
 package com.example.backend_soundtrackapp.service;
 
 import com.example.backend_soundtrackapp.model.Song;
+import com.example.backend_soundtrackapp.model.Playlist;
 import com.example.backend_soundtrackapp.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,4 +27,5 @@ public class SongService {
     public void deleteSongs(Integer id) {
         songRepository.deleteById(id);
     }
+
 }

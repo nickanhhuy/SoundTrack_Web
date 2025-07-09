@@ -1,7 +1,7 @@
 package com.example.backend_soundtrackapp.model;
 
 import jakarta.persistence.*;
-
+import java.util.List;
 
 
 @Entity
@@ -13,6 +13,8 @@ public class Song {
     private Integer id;
     private String title;
     private String artist;
+    private String genre;
+
 
     public Song() {
 
@@ -42,9 +44,18 @@ public class Song {
         this.title = title;
     }
 
-    public Song(Integer id, String artist, String title) {
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public Song(Integer id, String artist, String title, String genre) {
         this.id = id;
         this.artist = artist;
         this.title = title;
+        this.genre = genre;
     }
 }
