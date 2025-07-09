@@ -11,7 +11,7 @@ export interface Song {
 }
 export interface Playlist {
   title: string;
-  songs: Song[];
+  tracks: Song[];
 }
 
 // implement the service method caching the API request from backend
