@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class SongService {
@@ -27,5 +29,16 @@ public class SongService {
     public void deleteSongs(Integer id) {
         songRepository.deleteById(id);
     }
+    public List<Playlist> getPlaylistsGroupedByGenre() {
+        List<Song> allSongs = songRepository.findAll();
+
+        Map<String, List<Song>> groupedByGenre = allSongs.stream()
+                .collect(Collectors.groupingBy(Song::getGenre));
+
+        return groupedByGenre.entrySet().stream()
+                .map(entry -> new Playlist(entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
+    }
+
 
 }

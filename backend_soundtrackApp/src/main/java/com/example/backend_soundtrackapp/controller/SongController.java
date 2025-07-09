@@ -1,5 +1,6 @@
 package com.example.backend_soundtrackapp.controller;
 
+import com.example.backend_soundtrackapp.model.Playlist;
 import com.example.backend_soundtrackapp.model.Song;
 import com.example.backend_soundtrackapp.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class SongController {
 
     @Autowired
@@ -36,4 +37,9 @@ public class SongController {
         songService.deleteSongs(id);
     }
 
+    // get playlists by genres
+    @GetMapping("/playlists/genres")
+    public List<Playlist> getPlaylistByGenres() {
+        return songService.getPlaylistsGroupedByGenre();
+    }
 }

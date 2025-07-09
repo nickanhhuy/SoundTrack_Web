@@ -1,18 +1,16 @@
 package com.example.backend_soundtrackapp.model;
 
-import javax.sound.midi.Track;
 import java.util.List;
 
 public class Playlist {
     private String title;
-    private List<Track> tracks;
+    private List<Song> songs;
 
     public Playlist() {
-
     }
-    public Playlist(String title, List<Track> tracks) {
+    public Playlist(String title, List<Song> songs) {
         this.title = title;
-        this.tracks = tracks;
+        this.songs = songs;
     }
     public String getTitle() {
         return title;
@@ -20,10 +18,10 @@ public class Playlist {
     public void setTitle(String title) {
         this.title = title;
     }
-    public List<Track> getTracks() {
-        return tracks;
+    public List<Song> getTracks() {
+        return songs;
     }
-    public void setTracks(List<Track> tracks) {
-        this.tracks = tracks;
+    public void setTracks(List<Song> songs) {
+        this.songs = songs;
     }
 }
