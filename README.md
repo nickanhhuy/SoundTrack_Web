@@ -20,9 +20,12 @@ This website helps users search for songs, discover similar tracks by genre or v
 
 ## Project Structure
 
-feature:
-+ login/sign up through authentication: gmail, google, etc.
-+ auto send receipt to client's emails. (SNS,SQS, EventBridge)
-+ deploy application on AWS.
+Feature:
++ login/sign up through authentication: Gmail, Google, etc.
++ Auto-send a receipt to the client's email. (SNS, SQS, EventBridge)
++ Deploy the application on AWS.
++ Working AI feature that suggests similar vibes or songs based on your taste. 
+
+
 
 
