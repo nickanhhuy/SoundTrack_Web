@@ -1,13 +1,20 @@
 <h2 class="section-title">Trending by Genre</h2>
 
 <div *ngFor="let playlist of playlists" class="playlist-wrapper">
-  <h3>{{ playlist.title }}</h3>
+  <h3 (click)="openPlaylist(playlist)" class="clickable">
+    {{ playlist.title }}
+  </h3>
+</div>
 
-   <div class="songs-list">
-    <div class="song-card" *ngFor="let song of playlist.tracks">
-      <p class="song-title"><strong>Title:</strong> {{ song.title }}</p>
-      <p class="song-artist"><strong>Artist:</strong> {{ song.artist }}</p>
-      <p class="song-genre"><strong>Genre:</strong> {{ song.genre }}</p>
-    </div>
+
+<div class="modal" *ngIf="selectedPlaylist">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <h3>{{ selectedPlaylist.title }} Playlist</h3>
+    <ul>
+      <li *ngFor="let song of selectedPlaylist.tracks">
+        {{ song.title }} - {{ song.artist }} ({{ song.genre }})
+      </li>
+    </ul>
   </div>
 </div>

@@ -12,11 +12,18 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   playlists: Playlist[] = [];
-
+  selectedPlaylist: Playlist | null = null;
   constructor(private songService: SongService) {
     this.songService.getPlaylistByGenre().subscribe(data => {
       console.log('Playlists:', data);
       this.playlists = data;
     });
+  }
+  openPlaylist(playlist: Playlist) {
+    this.selectedPlaylist = playlist;
+  }
+
+  closeModal() {
+    this.selectedPlaylist = null;
   }
 }
