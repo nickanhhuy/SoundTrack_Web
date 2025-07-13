@@ -1,9 +1,9 @@
-.playlist-wrapper {
+.trending-container {
   display: inline-flex;
   gap: 20px;
   padding: 20px;
 }
-.clickable {
+.clickplaylist {
   cursor: pointer;
   color:skyblue;
   border-radius: 10px;
@@ -12,7 +12,8 @@
   background-color:cadetblue;
   transition: color 0.3s;
 }
-.clickable:hover {
+
+.clickplaylist:hover {
   color: #21618c;
 }
 
@@ -37,8 +38,12 @@
   max-width: 500px;
 }
 
-.close-button {
-  float: right;
-  font-size: 24px;
+.closebutton {
+  font-size: 10px;
+  font-weight: bold;
   cursor: pointer;
+  background-color: #8b5703;
+  color: rgb(247, 203, 46);
+  padding: 10px 20px;
+  border: none;
 }

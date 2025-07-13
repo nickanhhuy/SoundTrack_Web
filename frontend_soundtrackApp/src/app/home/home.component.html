@@ -1,7 +1,7 @@
-<h2 class="section-title">Trending by Genre</h2>
+<h2 class="trending">Trending by Genre</h2>
 
-<div *ngFor="let playlist of playlists" class="playlist-wrapper">
-  <h3 (click)="openPlaylist(playlist)" class="clickable">
+<div *ngFor="let playlist of playlists" class="trending-container">
+  <h3 (click)="openPlaylist(playlist)" class="clickplaylist">
     {{ playlist.title }}
   </h3>
 </div>
@@ -9,7 +9,7 @@
 
 <div class="modal" *ngIf="selectedPlaylist">
   <div class="modal-content">
-    <span class="close-button" (click)="closeModal()">&times;</span>
+    <button class="closebutton" (click)="closeModal()">X</button>
     <h3>{{ selectedPlaylist.title }} Playlist</h3>
     <ul>
       <li *ngFor="let song of selectedPlaylist.tracks">
@@ -18,3 +18,5 @@
     </ul>
   </div>
 </div>
+
+<h2> Top Hit </h2>
